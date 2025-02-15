@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #aeaceb;
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 400px; /* Limitamos el tamaño máximo de la card */
+            margin: 20px;
+        }
+        .email-button-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            position: absolute;
+            top: -2px;
+            padding-right: 10px;
+        }
+        .email-button {
+            width: 50px;
+            height: 50px;
+            background: #9999e0;
+            color: #27283c;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid #7777a0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            text-decoration: none;
+        }
+        .email-button:hover {
+            transform: scale(1.1);
+            background: #d7ff93;
+            color: #27283c;
+            border-color: #9bba64;
+        }
+        .card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            margin-top: 60px; /* Separación de la parte superior */
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            background: #aeaceb;
+            padding: 10px 15px;
+            border-radius: 50px;
+            border: 1px solid #7777a0;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        .social-links a:hover {
+            transform: scale(1.1);
+            background: #d7ff93;
+            color: #27283c;
+            border: 1px solid #9bba64;
+        }
+        .github { background: #333; }
+        .linkedin { background: #d7ff93; }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #27283c;
+            width: 100%;
+        }
+        footer a {
+            color: #e6ffbd;
+            text-decoration: underline;
+        }
+
+        /* Media Queries para pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .card {
+                padding: 20px; /* Reducir el padding en pantallas pequeñas */
+                margin-top: 50px;
+            }
+
+            .social-links {
+                flex-direction: column; /* Alinear los botones de las redes sociales verticalmente */
+                gap: 15px;
+            }
+
+            .email-button {
+                top: -60px; /* Ajuste del botón de correo para pantallas más pequeñas */
+                width: 45px;
+                height: 45px;
+                font-size: 20px;
+            }
+
+            footer {
+                font-size: 14px; /* Tamaño de fuente un poco mayor en el pie de página */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 15px; /* Aumentamos la reducción del padding */
+            }
+
+            .social-links a {
+                padding: 8px 12px; /* Reducimos el tamaño de los botones en pantallas muy pequeñas */
+            }
+
+            .email-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Contenedor del botón de email -->
+        <div class="email-button-container">
+            <a href="mailto:lizlobaton@gmail.com" class="email-button" title="Enviar email">✉️</a>
+        </div>
+        <!-- Card -->
+        <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/70670040?v=4" alt="Mi foto">
+            <h2>Liz Lobatón</h2> 
+            <p style="line-height: 1.2;">Developer en progreso… cargando al 80% ⏳🚀</p>
+            <div class="social-links">
+                <a href="https://github.com/lizlobaton" class="github" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/lizlobaton" class="linkedin" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025. Diseñado y Desarrollado por Liz Lobatón. Email: <a href="mailto:lizlobaton@gmail.com">lizlobaton@gmail.com</a>
+    </footer>
+</body>
+</html>
