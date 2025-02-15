@@ -35,12 +35,12 @@
         }
         .card {
             background: white;
-            padding: 50px 40px;
+            padding: 40px 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 100%;
-            max-width: 550px;
+            max-width: 400px;
             margin: 20px 0;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -49,8 +49,8 @@
             color: #e4e6eb; /* Texto más claro */
         }
         .card img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin-bottom: 15px;
             margin-top: 20px;
@@ -71,7 +71,7 @@
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .social-links a {
             text-decoration: none;
@@ -169,30 +169,30 @@
         @media (max-width: 768px) {
             .card {
                 padding: 20px;
-                margin: 50px 0;
+                margin: 30px 0;
             }
             .card img {
-                margin-top: 40px;
+                margin-top: 30px;
             }
             .social-links {
                 flex-direction: column;
                 gap: 15px;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
             footer {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
         @media (max-width: 480px) {
             .card {
                 padding: 15px;
-                margin: 60px 0;
+                margin: 40px 0;
             }
             .card img {
-                margin-top: 50px;
+                margin-top: 40px;
             }
             .social-links {
-                margin-bottom: 50px;
+                margin-bottom: 40px;
             }
         }
     </style>
@@ -206,7 +206,10 @@
         <div class="card">
             <img src="https://avatars.githubusercontent.com/u/70670040?v=4" alt="Mi foto">
             <h2>Liz Lobatón</h2>
-            <p style="line-height: 1.2;">Developer en progreso… cargando al 80% ⏳🚀</p>
+            <p style="line-height: 1.2;">
+                Developer en progreso…<br>
+                cargando al 80% ⏳🚀
+            </p>
             <div class="social-links">
                 <a href="https://github.com/lizlobaton" class="github" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/lizlobaton" class="linkedin" target="_blank">LinkedIn</a>
@@ -216,7 +219,8 @@
         </div>
     </div>
     <footer>
-        © 2025. Diseñado y Desarrollado por <a href="mailto:lizlobaton@gmail.com">lizlobaton@gmail.com</a>
+        <div>2025</div>
+        <div>Diseñado y Desarrollado por <a href="mailto:lizlobaton@gmail.com">lizlobaton@gmail.com</a></div>
     </footer>
 
     <script>
