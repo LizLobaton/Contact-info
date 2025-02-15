@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #aeaceb;
+            background-color: #8f8dcd;
         }
         .card-container {
             display: flex;
@@ -35,6 +35,7 @@
             text-align: center;
             width: 100%;
             max-width: 550px;
+            margin: 20px 0; /* Margen superior e inferior */
         }
         .card img {
             width: 120px;
@@ -64,6 +65,7 @@
             border-radius: 50px;
             border: 1px solid #7777a0;
             transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            outline: none; /* Elimina el borde de foco predeterminado */
         }
         .social-links a:hover {
             transform: scale(1.1);
@@ -71,11 +73,13 @@
             color: #27283c;
             border: 1px solid #9bba64;
         }
+        .social-links a:focus {
+            background: #aeaceb; /* Regresa al color original después de hacer clic */
+        }
         .github { background: #333; }
         .linkedin { background: #d7ff93; }
         .portfolio { background: #ff69b4; } /* Botón de Portfolio */
         .email { background: #9999e0; } /* Botón de Email */
-        .whatsapp { background: #25d366; } /* Botón de WhatsApp */
         footer {
             position: fixed;
             bottom: 10px;
@@ -93,6 +97,7 @@
         @media (max-width: 768px) {
             .card {
                 padding: 20px; /* Reducir el padding en pantallas pequeñas */
+                margin: 50px 0; /* Aumentar margen superior e inferior */
             }
 
             .social-links {
@@ -107,7 +112,8 @@
 
         @media (max-width: 480px) {
             .card {
-                padding: 15px; /* Aumentamos la reducción del padding */
+                padding: 15px; /* Reducir el padding */
+                margin: 60px 0; /* Más espacio en la parte superior e inferior */
             }
 
             .social-links a {
@@ -126,14 +132,12 @@
             <div class="social-links">
                 <a href="https://github.com/lizlobaton" class="github" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/lizlobaton" class="linkedin" target="_blank">LinkedIn</a>
-                <a href="https://www.behance.net/lobaton" class="portfolio" target="_blank">Portfolio</a>
+                <a href="https://lizlobaton.com" class="portfolio" target="_blank">Portfolio</a>
                 <a href="mailto:lizlobaton@gmail.com" class="email" target="_blank">Email</a>
-                <a href="https://wa.me/+5491124017746" class="whatsapp" target="_blank">WhatsApp</a> <!-- Botón de WhatsApp -->
             </div>
         </div>
     </div>
     <footer>
-        © 2025. Diseñado y Desarrollado por <a href="mailto:lizlobaton@gmail.com">lizlobaton@gmail.com</a>
-    </footer>
+        © 2025. Diseñado y Desarrollado por Liz Lobatón.</footer>
 </body>
 </html>
