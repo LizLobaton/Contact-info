@@ -5,233 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liz Dev Contact Info</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #aeaceb;
-            color: #27283c;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        body.dark-mode {
-            background-color: #27283c; /* Fondo más oscuro */
-            color: #d1d5db; /* Texto claro */
-        }
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-            margin: 20px;
-        }
-        .card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-            margin: 20px 0;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        body.dark-mode .card {
-            background: #383b56; /* Fondo de la tarjeta en modo oscuro */
-            color: #e4e6eb; /* Texto más claro */
-        }
-        .card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-            margin-top: 20px;
-        }
-        .card h2 {
-            margin-bottom: 10px;
-        }
-        .card p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-        body.dark-mode .card p {
-            color: #b3b8bf;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .social-links a {
-            text-decoration: none;
-            color: white;
-            background: #aeaceb;
-            padding: 10px 15px;
-            border-radius: 50px;
-            border: 1px solid #7777a0;
-            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-            outline: none;
-        }
-        body.dark-mode .social-links a {
-            background: #27283c; /* Botones oscuros */
-            border-color: #e6ffbd; /* Bordes en modo oscuro */
-            color: #e6ffbd; /* Texto en modo oscuro */
-        }
-        .social-links a:hover {
-            transform: scale(1.1);
-            background: #d7ff93;
-            color: #27283c;
-            border: 1px solid #9bba64;
-        }
-        .social-links a:focus {
-            outline: none;
-            background: #aeaceb;
-            color: white;
-            border: 1px solid #7777a0;
-        }
-        .github { background: #333; }
-        .linkedin { background: #d7ff93; }
-        .portfolio { background: #ff69b4; }
-        .email { background: #9999e0; }
-        footer {
-            position: fixed;
-            bottom: 10px;
-            text-align: center;
-            font-size: 12px;
-            color: #27283c;
-            width: 100%;
-        }
-        footer a {
-            color: #e6ffbd;
-            text-decoration: underline;
-        }
-        body.dark-mode footer {
-            color: #b3b8bf;
-        }
-
-        /* Switch para modo oscuro */
-        .dark-mode-toggle {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            color: #27283c;
-            font-weight: bold;
-        }
-        body.dark-mode .dark-mode-toggle {
-            color: #d1d5db;
-        }
-        .dark-mode-toggle input {
-            appearance: none;
-            width: 40px;
-            height: 20px;
-            background: #27283c;
-            border-radius: 20px;
-            position: relative;
-            outline: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .dark-mode-toggle input::before {
-            content: "";
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 16px;
-            height: 16px;
-            background: white;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-        .dark-mode-toggle input:checked {
-            background: #aeaceb;
-        }
-        .dark-mode-toggle input:checked::before {
-            transform: translateX(20px);
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .card {
-                padding: 20px;
-                margin: 30px 0;
-            }
-            .card img {
-                margin-top: 30px;
-            }
-            .social-links {
-                flex-direction: column;
-                gap: 15px;
-                margin-bottom: 30px;
-            }
-            footer {
-                font-size: 12px;
-            }
-        }
-        @media (max-width: 480px) {
-            .card {
-                padding: 15px;
-                margin: 40px 0;
-            }
-            .card img {
-                margin-top: 40px;
-            }
-            .social-links {
-                margin-bottom: 40px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #aeaceb; color: #27283c; transition: .3s; }
+        body.dark { background: #27283c; color: #d1d5db; }
+        .card { text-align: center; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: .3s; }
+        body.dark .card { background: #383b56; color: #e4e6eb; }
+        img { width: 100px; height: 100px; border-radius: 50%; margin: 15px 0; }
+        .social-links { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
+        .social-links a { text-decoration: none; padding: 10px 15px; border-radius: 50px; background: #aeaceb; color: white; transition: .3s; }
+        body.dark .social-links a { background: #27283c; color: #e6ffbd; }
+        .social-links a:hover { transform: scale(1.1); background: #d7ff93; color: #27283c; }
+        .dark-mode-toggle { position: fixed; top: 15px; right: 15px; cursor: pointer; font-size: 20px; }
+        footer { position: fixed; bottom: 10px; font-size: 12px; text-align: center; }
+        footer a { color: #e6ffbd; text-decoration: underline; }
     </style>
 </head>
 <body>
-    <div class="dark-mode-toggle">
-        <span id="mode-icon">🌞</span>
-        <input type="checkbox" id="dark-mode-switch">
-    </div>
-    <div class="card-container">
-        <div class="card">
-            <img src="https://avatars.githubusercontent.com/u/70670040?v=4" alt="Mi foto">
-            <h2>Liz Lobatón</h2>
-            <p style="line-height: 1.2;">
-                Developer en progreso…<br>
-                cargando al 80% ⏳🚀
-            </p>
-            <div class="social-links">
-                <a href="https://github.com/lizlobaton" class="github" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/lizlobaton" class="linkedin" target="_blank">LinkedIn</a>
-                <a href="https://www.behance.net/lobaton" class="portfolio" target="_blank">Portfolio</a>
-                <a href="mailto:lizlobaton@gmail.com" class="email" target="_blank">Email</a>
-            </div>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌞</div>
+    <div class="card">
+        <img src="https://avatars.githubusercontent.com/u/70670040?v=4" alt="Foto de Liz">
+        <h2>Liz Lobatón</h2>
+        <p>Developer en progreso…<br>cargando al 80% ⏳🚀</p>
+        <div class="social-links">
+            <a href="https://github.com/lizlobaton" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/lizlobaton" target="_blank">LinkedIn</a>
+            <a href="https://www.behance.net/lobaton" target="_blank">Portfolio</a>
+            <a href="mailto:lizlobaton@gmail.com" target="_blank">Email</a>
         </div>
     </div>
-    <footer>
-        <div>©2025. Diseñado y Desarrollado </div>
-        <div>por <a href="mailto:lizlobaton@gmail.com">lizlobaton@gmail.com</a></div>
-    </footer>
-
+    <footer>©2025. Diseñado por <a href="mailto:lizlobaton@gmail.com">Liz Lobatón</a></footer>
     <script>
-        const toggleSwitch = document.getElementById('dark-mode-switch');
-        const modeIcon = document.getElementById('mode-icon');
-        
-        toggleSwitch.addEventListener('change', () => {
-            const isDarkMode = toggleSwitch.checked;
-            document.body.classList.toggle('dark-mode', isDarkMode);
-            modeIcon.textContent = isDarkMode ? '🌛' : '🌞';
-        });
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+            document.querySelector('.dark-mode-toggle').textContent = document.body.classList.contains('dark') ? '🌛' : '🌞';
+        }
     </script>
 </body>
 </html>
